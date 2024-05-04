@@ -25,6 +25,17 @@ public class VimeoChannel {
         return videos;
     }
 
+    public VimeoChannel(String name, String description, String createdTime, List<Video> videos) {
+        this.name = name;
+        this.description = description;
+        this.createdTime = createdTime;
+        this.videos = videos;
+    }
+
+    public static VimeoChannel of(String name, String description, String createdTime, List<Video> videos) {
+        return new VimeoChannel(name, description, createdTime, videos);
+    }
+
     public void setVideos(List<Video> videos) {
         this.videos = videos;
     }
