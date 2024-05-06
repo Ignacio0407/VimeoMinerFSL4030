@@ -7,7 +7,6 @@ import aiss.restclient.model.comments.Comment;
 import aiss.restclient.model.comments.VimeoComments;
 import aiss.restclient.model.users.VimeoUser;
 import aiss.restclient.model.videos.VimeoVideos;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -21,8 +20,9 @@ import java.util.List;
 
 @Service
 public class VimeoService {
-    @Autowired
-    RestTemplate restTemplate;
+    
+    //@Autowired
+    RestTemplate restTemplate = new RestTemplate();
 
     public HttpEntity<VimeoChannel> auth (String token){
         HttpHeaders headers = new HttpHeaders();

@@ -1,0 +1,8 @@
+lineas 43-48 por si peta el proyecto en el pom.xml
+
+<dependency>
+            <groupId>aiss</groupId>
+            <artifactId>restclient</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>

@@ -4,7 +4,6 @@ import aiss.restclient.model.channel.VimeoChannel;
 import aiss.restclient.model.videos.VimeoVideos;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -12,8 +11,8 @@ import static org.junit.jupiter.api.Assertions.*;
 @SpringBootTest
 class VimeoServiceTest {
 
-    @Autowired
-    VimeoService service;
+    //@Autowired
+    VimeoService service = new VimeoService();
 
     @Test
     @DisplayName("Get channels")
@@ -33,5 +32,10 @@ class VimeoServiceTest {
         VimeoVideos videos = service.getVideos(token, videosUri);
         assertNotNull(videos, "The videos are null");
         System.out.println(videos);
+    }
+
+    public static void main(String[] args) {
+        VimeoServiceTest v = new VimeoServiceTest();
+        v.getChannels();
     }
 }
