@@ -1,30 +1,32 @@
 
-package aiss.restclient.model.users;
+package aiss.restclient.model.Vimeo.videos;
+
+import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Pictures {
+public class VimeoVideos {
 
-    @JsonProperty("base_link")
-    private String baseLink;
+    @JsonProperty("data")
+    private List<Video> data;
 
-    @JsonProperty("base_link")
-    public String getBaseLink() {
-        return baseLink;
+    @JsonProperty("data")
+    public List<Video> getData() {
+        return data;
     }
 
-    @JsonProperty("base_link")
-    public void setBaseLink(String baseLink) {
-        this.baseLink = baseLink;
+    @JsonProperty("data")
+    public void setData(List<Video> data) {
+        this.data = data;
     }
-
 
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(((this.baseLink == null)?"<null>":this.baseLink));
+        sb.append(((this.data == null)?"<null>":this.data));
+        sb.append(',');
         if (sb.charAt((sb.length()- 1)) == ',') {
             sb.setCharAt((sb.length()- 1), ']');
         } else {

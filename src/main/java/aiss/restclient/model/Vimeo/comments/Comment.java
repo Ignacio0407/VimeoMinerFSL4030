@@ -1,9 +1,10 @@
 
-package aiss.restclient.model.comments;
+package aiss.restclient.model.Vimeo.comments;
 
-import aiss.restclient.model.users.VimeoUser;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
+
+import aiss.restclient.model.Vimeo.users.VimeoUser;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Comment {

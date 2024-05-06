@@ -1,11 +1,10 @@
 ﻿package aiss.restclient.controller;
 
-import aiss.restclient.model.channel.VimeoChannel;
+import aiss.restclient.model.Vimeo.channel.VimeoChannel;
 import aiss.restclient.service.VimeoService;
 
 import java.util.ArrayList;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -24,7 +23,7 @@ public class VimeoController {
     }
 
     @PostMapping("/{id}")
-    public VimeoChannel create(@PathVariable String id){
+    public VimeoChannel post(@PathVariable String id) {
         String token = "1a91f47a52a63df97b35f0694c7bf4cb";
         VimeoChannel channel = vimeoService.getChannels(token,id);
         return new VimeoChannel(channel.getName(), channel.getDescription(), channel.getCreatedTime(), new ArrayList<>());

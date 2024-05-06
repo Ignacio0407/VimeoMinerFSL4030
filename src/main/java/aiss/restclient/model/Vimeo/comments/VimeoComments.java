@@ -1,5 +1,5 @@
 
-package aiss.restclient.model.comments;
+package aiss.restclient.model.Vimeo.comments;
 
 import java.util.List;
 

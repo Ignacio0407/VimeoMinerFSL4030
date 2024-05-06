@@ -1,5 +1,5 @@
 
-package aiss.restclient.model.users;
+package aiss.restclient.model.Vimeo.users;
 
 import com.fasterxml.jackson.annotation.*;
 

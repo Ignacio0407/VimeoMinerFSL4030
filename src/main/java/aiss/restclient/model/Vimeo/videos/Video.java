@@ -1,10 +1,11 @@
 
-package aiss.restclient.model.videos;
+package aiss.restclient.model.Vimeo.videos;
 
-import aiss.restclient.model.caption.Caption;
-import aiss.restclient.model.comments.Comment;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
+
+import aiss.restclient.model.Vimeo.caption.Caption;
+import aiss.restclient.model.Vimeo.comments.Comment;
 
 import java.util.List;
 

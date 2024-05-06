@@ -1,10 +1,11 @@
 package aiss.restclient.service;
 
-import aiss.restclient.model.channel.VimeoChannel;
-import aiss.restclient.model.videos.VimeoVideos;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
+
+import aiss.restclient.model.Vimeo.channel.VimeoChannel;
+import aiss.restclient.model.Vimeo.videos.VimeoVideos;
 
 import static org.junit.jupiter.api.Assertions.*;
 

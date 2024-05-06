@@ -1,8 +1,9 @@
 
-package aiss.restclient.model.channel;
+package aiss.restclient.model.Vimeo.channel;
 
-import aiss.restclient.model.videos.Video;
 import com.fasterxml.jackson.annotation.*;
+
+import aiss.restclient.model.Vimeo.videos.Video;
 
 import java.util.List;
 

@@ -1,18 +1,19 @@
 package aiss.restclient.service;
 
-import aiss.restclient.model.caption.Caption;
-import aiss.restclient.model.caption.VimeoCaptions;
-import aiss.restclient.model.channel.VimeoChannel;
-import aiss.restclient.model.comments.Comment;
-import aiss.restclient.model.comments.VimeoComments;
-import aiss.restclient.model.users.VimeoUser;
-import aiss.restclient.model.videos.VimeoVideos;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
+
+import aiss.restclient.model.Vimeo.caption.Caption;
+import aiss.restclient.model.Vimeo.caption.VimeoCaptions;
+import aiss.restclient.model.Vimeo.channel.VimeoChannel;
+import aiss.restclient.model.Vimeo.comments.Comment;
+import aiss.restclient.model.Vimeo.comments.VimeoComments;
+import aiss.restclient.model.Vimeo.users.VimeoUser;
+import aiss.restclient.model.Vimeo.videos.VimeoVideos;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,5 +1,5 @@
 
-package aiss.restclient.model.caption;
+package aiss.restclient.model.Vimeo.caption;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
