@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/apipath")
 public class VimeoController {
 
-    @Autowired
-    VimeoService vimeoService;
+    //@Autowired
+    VimeoService vimeoService = new VimeoService();
 
     // POST http://localhost:8080/apipath/{id}
 
