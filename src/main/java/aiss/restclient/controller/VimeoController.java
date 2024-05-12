@@ -3,10 +3,10 @@ package aiss.restclient.controller;
 import aiss.restclient.model.VideoMiner.Channel;
 import aiss.restclient.model.VideoMiner.Comment;
 import aiss.restclient.model.VideoMiner.User;
-import aiss.restclient.model.channel.ChannelData;
-import aiss.restclient.model.Channel;
-import aiss.restclient.model.channel.VimeoChannel;
+import aiss.restclient.model.Vimeo.channel.VimeoChannel;
 import aiss.restclient.service.VimeoService;
+import aiss.restclient.model.VideoMiner.Video;
+import aiss.restclient.model.VideoMiner.Caption;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
@@ -44,7 +44,7 @@ public class VimeoController {
             newChannel.setCreatedTime(vimeoChannel.getCreatedTime());
             if (vimeoChannel.getVideos() != null && !vimeoChannel.getVideos().isEmpty()) {
                 vimeoChannel.getVideos().forEach(vimeoVideo -> {
-                    aiss.restclient.model.VideoMiner.Video vid = new aiss.restclient.model.VideoMiner.Video();
+                    Video vid = new aiss.restclient.model.VideoMiner.Video();
                     vid.setId(vimeoVideo.getUri().replace("/videos/", ""));
                     vid.setName(vimeoVideo.getName());
                     if (vimeoVideo.getDescription() != null) {
@@ -54,7 +54,7 @@ public class VimeoController {
                     vid.setCaptions(new ArrayList<>());
                     if (vimeoVideo.getCaptions() != null && !vimeoVideo.getCaptions().isEmpty()) {
                         vimeoVideo.getCaptions().forEach(vimeoCaption -> {
-                            aiss.restclient.model.VideoMiner.Caption cap = new aiss.restclient.model.VideoMiner.Caption();
+                            Caption cap = new aiss.restclient.model.VideoMiner.Caption();
                             cap.setId(vimeoCaption.getUri().replace("/captions/", ""));
                             cap.setLanguage(vimeoCaption.getLanguage());
                             cap.setName(vimeoCaption.getName());
@@ -97,7 +97,7 @@ public class VimeoController {
         newChannel.setCreatedTime(vimeoChannel.getCreatedTime());
         if (vimeoChannel.getVideos() != null && !vimeoChannel.getVideos().isEmpty()) {
             vimeoChannel.getVideos().forEach(vimeoVideo -> {
-                aiss.restclient.model.VideoMiner.Video vid = new aiss.restclient.model.VideoMiner.Video();
+                Video vid = new aiss.restclient.model.VideoMiner.Video();
                 vid.setId(vimeoVideo.getUri().replace("/videos/", ""));
                 vid.setName(vimeoVideo.getName());
                 if (vimeoVideo.getDescription() != null) {
@@ -107,7 +107,7 @@ public class VimeoController {
                 vid.setCaptions(new ArrayList<>());
                 if (vimeoVideo.getCaptions() != null && !vimeoVideo.getCaptions().isEmpty()) {
                     vimeoVideo.getCaptions().forEach(vimeoCaption -> {
-                        aiss.restclient.model.VideoMiner.Caption cap = new aiss.restclient.model.VideoMiner.Caption();
+                        Caption cap = new Caption();
                         cap.setId(vimeoCaption.getUri().replace("/captions/", ""));
                         cap.setLanguage(vimeoCaption.getLanguage());
                         cap.setName(vimeoCaption.getName());

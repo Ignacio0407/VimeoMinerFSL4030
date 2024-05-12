@@ -1,4 +1,4 @@
-package aiss.restclient.model.channel;
+package aiss.restclient.model.Vimeo.channel;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;

@@ -1,13 +1,5 @@
 package aiss.restclient.service;
 
-import aiss.restclient.model.caption.Caption;
-import aiss.restclient.model.caption.VimeoCaptions;
-import aiss.restclient.model.channel.ChannelData;
-import aiss.restclient.model.channel.VimeoChannel;
-import aiss.restclient.model.comments.Comment;
-import aiss.restclient.model.comments.VimeoComments;
-import aiss.restclient.model.users.VimeoUser;
-import aiss.restclient.model.videos.VimeoVideos;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -18,6 +10,7 @@ import org.springframework.web.client.RestTemplate;
 
 import aiss.restclient.model.Vimeo.caption.Caption;
 import aiss.restclient.model.Vimeo.caption.VimeoCaptions;
+import aiss.restclient.model.Vimeo.channel.ChannelData;
 import aiss.restclient.model.Vimeo.channel.VimeoChannel;
 import aiss.restclient.model.Vimeo.comments.Comment;
 import aiss.restclient.model.Vimeo.comments.VimeoComments;
@@ -31,8 +24,8 @@ import java.util.List;
 @Service
 public class VimeoService {
     
-    //@Autowired
-    RestTemplate restTemplate = new RestTemplate();
+    @Autowired
+    RestTemplate restTemplate;
 
     public HttpEntity<VimeoChannel> auth (String token){
         HttpHeaders headers = new HttpHeaders();
